@@ -32,7 +32,7 @@ header { grid-area: top; background-color: #2B5AAD; }
 section#hero { grid-area: hero; }
 section#boxes { grid-area: boxes; }
 section#main { grid-area: info; }
-section#exhibitions { grid-area: exhibitions; }
+section#exhibitions, section#exhibition-page { grid-area: exhibitions; }
 section#newsletter { grid-area: newsletter; }
 footer { grid-area: bottom; background-color:#2B5AAD; }
 
@@ -225,11 +225,13 @@ section#hero {
     position: relative;
 }
 
+
 section#hero img {
     width: 100%;
     height: auto;
     display: block;
 }
+
 
 section#hero > div.left {
     display: none;
@@ -251,6 +253,26 @@ section#hero > div.tickets > h2 {
     text-align: center;
     bottom: 8px;
     display: block;
+}
+
+section#hero img.hero-title {
+    display: none;
+}
+
+section#hero div.color {
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
+    position: relative;
+    background-color: #4788F7;
+    width: 96%;
+    height: 42px;
+    bottom: 15px;
+}
+
+section#hero h4 {
+    font-size: 24px;
+    font-weight: 400;
 }
 
 section#boxes > div.wrapper {
@@ -378,7 +400,7 @@ section#main > div.mobile > div > div.cta {
 section#main > div.mobile > div > div.textbox {
     position: absolute;
     height: 140px;
-    width: 325px;
+    width: 85%;
     background-color: #F19151;
     bottom: -100px;
     left: 50%;
@@ -412,6 +434,49 @@ section#exhibitions div.wrapper div h4 {
 section#exhibitions div.wrapper div a {
     text-decoration: none;
     color: #FFFFFF;
+}
+
+section#exhibition-page img {
+    width: 100%;
+    height: 278px;
+    margin: 0px;
+    padding: 10px;
+    padding-bottom: 0;
+    object-fit: cover;
+    box-sizing: border-box;
+    display: block;
+}
+
+section#exhibition-page div.wrapper p.desktop {
+    display: none;
+}
+
+section#exhibition-page div.wrapper p.mobile {
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 18px;
+    margin-top: -25px;
+    padding: 12px;
+}
+
+section#exhibition-page div.wrapper h2 {
+    padding-left: 12px;
+    padding-top: 5px;
+}
+
+section#exhibition-page div.wrapper div.textbox {
+    position: relative;
+    height: 100%;
+    width: 85%;
+    background-color: #F19151;
+    top: -60px;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -20px;
 }
 
 section#newsletter img{
