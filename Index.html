@@ -14,7 +14,7 @@
     <header>
         <div class="headerlogo">
             <img src="Images/icon-1719742.svg" alt="CSM Logo" id="logo">
-            <p class=logo>Community Science Museum</p>
+            <h1>Community Science Museum</h1>
         </div>
     <div class="menuwrap"> 
         <input type="checkbox" class="hamburger-menu">
@@ -59,7 +59,7 @@
         </h2>
     </div>
     <div class="tickets">
-        <p>Reserve tickets now</p>
+        <h2>RESERVE TICKETS NOW</h2>
     </div>
 </section>
 
@@ -157,9 +157,9 @@
 </div>
 <div class="mobile">
         <div class="opening-hours">
-            <h3>Opening Hours</h3>
+            <h2>Opening Hours</h2>
             <div>
-                <ul id="date">
+                <ul class="date">
                     <li>Monday</li>
                     <li>Tue-Thursday</li>
                     <li>Friday</li>
@@ -168,7 +168,7 @@
                 </ul>
             </div>
             <div>
-                <ul id="time">
+                <ul class="time">
                     <li>Closed</li>
                     <li>10:00-16:00</li>
                     <li>10:00-19:00</li>
@@ -180,13 +180,13 @@
     <div class="container">
         <img src="Images/exhibition-1863344_1920.jpg" alt="Space Exhibition" class="mobile">
         <div class="cta">
-        <p><a href="#">Visit us</a></p>
+        <h2><a href="#">Visit us</a></h2>
         </div>
     </div>
     <div class="container">
         <img src="Images/scientific-2040795_1280.jpg" alt="#" class="mobile">
         <div class="textbox">
-        <p><a href="#">Energetica Exhibition</a></p>
+        <h2><a href="#">Energetica Exhibition</a></h2>
         <p>
             On loan from the NEMO Science Museum in Amsterdam, 
             the Energetica exhibition is coming to the Community Science Museum. 
@@ -197,55 +197,48 @@
 </section>
 <section id="exhibitions">
     <div class="wrapper">
-        <div class="evolution"><img src="Images/skeleton-414543_1920.jpg" alt="Skeleton Display">
-            <h4>EVOLUTION</h4>
+        <div class="evolution"><div class="overlay"></div><img src="Images/skeleton-414543_1920.jpg" alt="Skeleton Display">
+            <h4><a href="#">EVOLUTION</a></h4>
         </div>
         <div class="ecology"><img src="Images/genoa-956405_1920.jpg" alt="Ant Exhibition">
-            <h4>ECOLOGY</h4>
+            <h4><a href="#">ECOLOGY</a></h4>
         </div>
         <div class="robotics"><img src="Images/samuel-zeller-158996.jpg" alt="VR googles">
-            <h4>ROBOTICS & AI</h4>
+            <h4><a href="#">ROBOTICS & AI</a></h4>
         </div>
         <div class="biology"><img src="Images/samuel-zeller-113381.jpg" alt="Cross section of human">
-            <h4>BIOLOGY & MEDICINE</h4>
+            <h4><a href="#">BIOLOGY & MEDICINE</a></h4>
         </div>
         <div class="cosmology"><img src="Images/image-from-rawpixel-id-441103-jpeg.jpg" alt="Solar system">
-            <h4>COSMOLOGY</h4>
+            <h4><a href="#">COSMOLOGY</a></h4>
         </div>
     </div>
 </section>
 <section id="newsletter">
     <div class="wrapper">
-        <div>
-            <img src="Images/celso-405219.jpg" alt="Phases of the Moon">
-            <h1>Newsletter</h1>
+             <img src="Images/celso-405219.jpg" alt="Phases of the Moon">
+             <h2>Newsletter</h2>
             <p>Subscribe to our newsletter and find out more.</p>
-            <div>
-            <form action="where/to/send/data" method="get">
-                <ul>
-                 <li>
-                   <input type="email" id="Mail" placeholder="Enter your E-Mail">
-                 </li>
-                </ul>
-                </form>
-            </div>
-            <div id="submit">SUBMIT</div>
+            <div class="container">
+            <form action="where/to/send/data" method="get" class="container">
+                <input type="email" id="Mail" placeholder="Enter your E-Mail">
+                <button type="submit" class="btn">submit</button>
+            </form>
         </div>
     </div>
 </section>
-
 <footer>
-    <div>
-    <h4>Community Science Museum</h4>
-    <img src="Images/icon-1719742.svg" alt="CSM Logo">
-    </div>
-    <div id="socials">
-        <ul class="fa-ul">
-            <li><span class="fa-li"><i class="#"></i></span></li>
-            <li><span class="fa-li"><i class="#"></i></span></li>
-            <li><span class="fa-li"><i class="#"></i></span></li>
-            <li><span class="fa-li"><i class="#"></i></span></li>
-        </ul>
+<div class="wrapper">
+    <div class="left">
+        <img src="Images/icon-1719742.svg" alt="CSM Logo">
+        <h1>Community Science Museum</h1>
+        <div class="socials">
+            <ul class="fa-ul">
+            <li><span class="fa-li"><i class="fab fa-facebook-square fa-2x"></i></span></li>
+            <li><span class="fa-li"><i class="fab fa-instagram-square fa-2x"></i></span></li>
+            <li><span class="fa-li"><i class="fab fa-twitter-square fa-2x"></i></span></li>
+            </ul>
+        </div>
     </div>
 <div id="nav-footer">
     <nav id="footer">
@@ -259,18 +252,22 @@
         </ul>
     </nav>
 </div>
-<div>
-    <h5>Visit Us</h5>
+<div class="right">
+    <div>
+    <p class="title">Visit Us</p>
     <p>Community Science Museum
-        Bredalsmarken 15.
+        Bredalsmarken 15.<br>
         Bergen, Norway
     </p>
-    <h5>Contact Us</h5>
+    <p class="title">Contact Us</p>
     <p>
         95 15 95 85
         info@csm.com
     </p>
+    </div>
 </div>
+</div>
+<div class="clear"></div>
 </footer>
 
 </body>

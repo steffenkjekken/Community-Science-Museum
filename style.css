@@ -1,6 +1,8 @@
 @font-face {
     font-family: "MuseoModerno", cursive;
-    src: url("../Community-Science-Museum/fonts/MuseoModerno/MuseoModerno-VariableFont_wght.ttf") format("truetype");
+    src: url("../Community-Science-Museum/fonts/MuseoModerno/MuseoModerno-VariableFont_wght.ttf") format("truetype supports variations"),
+        url("../Community-Science-Museum/fonts/MuseoModerno/MuseoModerno-VariableFont_wght.ttf") format("truetype-variations");
+        font-weight: 100 1000%;
 
     font-family: "Darker Grotesque", sans-serif;
     src: url("../Community-Science-Museum/fonts/Darker_Grotesque/DarkerGrotesque-Regular.ttf") format("truetype");
@@ -32,7 +34,33 @@ section#boxes { grid-area: boxes; }
 section#main { grid-area: info; }
 section#exhibitions { grid-area: exhibitions; }
 section#newsletter { grid-area: newsletter; }
-footer { grid-area: bottom; }
+footer { grid-area: bottom; background-color:#2B5AAD; }
+
+h1 {
+    font-family: "MuseoModerno", cursive;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+h2 {
+    font-family: "Blinker", sans-serif;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+
+h3 {
+    font-family: "Blinker", sans-serif;
+    font-weight: normal;
+    color:black;
+    font-size: 40px;
+}
+
+h4 {
+    font-family: "MuseoModerno", cursive;
+    font-size: 20px;
+    color: #FFFFFF;
+
+}
 
 header {
     font-family: "MuseoModerno", cursive;
@@ -45,12 +73,12 @@ header img#logo {
     display: inline-block;
 }
 
-header p {
+header .headerlogo h1 {
     vertical-align: middle;
     font-size: 18px;
     color: #FFFFFF;
     display: inline-block;
-    width: 150px;
+    width: 160px;
     overflow-wrap: break-word;
 }
 
@@ -66,8 +94,8 @@ header p {
     top: 0;
     right: 0;
     z-index: 2;
-    width: 85px;
-    height: 85px;
+    width: 80px;
+    height: 80px;
     opacity: 0;
 }
 
@@ -76,8 +104,8 @@ header p {
     top: 0;
     right: 0;
     z-index: 1;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     padding: 1rem;
     background: #2B5AAD;
     display: flex;
@@ -172,19 +200,21 @@ header p {
 }
 
 header nav ul li {
-    justify-content: center;
+    text-align: center;
     font-size: 2rem;
-    padding: 5rem;
+    padding: 2rem;
     list-style: none;
     
 }
 
 header nav ul li a {
     text-decoration: inherit;
-    display: flex;
+    display: block;
     flex-direction: column;
-    padding: 8vw;
+    padding: 3vw;
+    color: #FFFFFF;
     background: #F19151;
+    overflow-wrap: initial;
 }
 
 #announcement {
@@ -198,6 +228,7 @@ section#hero {
 section#hero img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 section#hero > div.left {
@@ -215,10 +246,11 @@ section#hero > div.tickets {
     border-radius: 10px;
 }
 
-section#hero > div.tickets > p {
+section#hero > div.tickets > h2 {
     position: relative;
     text-align: center;
-    margin-bottom: 0;
+    bottom: 8px;
+    display: block;
 }
 
 section#boxes > div.wrapper {
@@ -228,9 +260,19 @@ section#boxes > div.wrapper {
 }
 
 section#boxes > div.wrapper > div{
+    text-align: center;
     width: 100%;
     height: 68px;
     background: #2B5AAD;
+}
+
+section#boxes > div.wrapper > div > h3 {
+    margin-top: 5px;
+}
+
+section#boxes > div.wrapper > div > h3 > a{
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 section#boxes > div.wrapper > div:last-child{
@@ -255,21 +297,35 @@ section#main > div.right-text {
 }
 
 section#main > div.mobile {
-    padding: 15px;
+    position: relative;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 section#main > div.mobile > div.opening-hours > div {
     display: inline-block;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+section#main > div.mobile > div.opening-hours > h2 { 
+    margin: 0;
+    padding: 10px;
+    color: black;
 }
 
 section#main > div.mobile > div.opening-hours > div > ul {
-    left: 70%;
-    transform: translate(25%);
     list-style-type: none;
 }
 
 section#main > div.mobile > div.opening-hours > div > ul > li {
-    padding: 5px;
+    padding: 6px;
+    font-family: "Blinker", sans-serif;
+    font-size: 20px;
+}
+section#main > div.mobile > div.opening-hours > div > ul.time > li {
+    font-weight: 600;
+    font-family: "Blinker", sans-serif;
 }
 
 section#main img {
@@ -286,6 +342,30 @@ section#main > div.mobile > div.container {
     position: relative;
 }
 
+section#main > div.mobile > div > div.cta >  h2 > a,
+section#main > div.mobile > div > div.textbox >  h2 > a
+ {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+section#main > div.mobile > div > div.textbox >  h2 {
+    margin: 0;
+    margin-bottom: -15px;
+    padding-top: 10px;
+}
+
+section#main > div.mobile > div > div.textbox > p {
+    height: 82px;
+    width: 95%;
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 20px;
+    overflow-wrap: break-word;
+    display: inline-block;
+}
+
 section#main > div.mobile > div > div.cta {
     position: absolute;
     width: 115px;
@@ -297,6 +377,7 @@ section#main > div.mobile > div > div.cta {
 
 section#main > div.mobile > div > div.textbox {
     position: absolute;
+    height: 140px;
     width: 325px;
     background-color: #F19151;
     bottom: -100px;
@@ -320,12 +401,154 @@ section#exhibitions div.wrapper {
 
 section#exhibitions div.wrapper div h4 {
     position: absolute;
+    width: 100%;
     left: 50%;
     transform: translate(-50%);
     text-align: center;
-    display: flex;
+    display: block;
+    margin-top: -70px;
 }
 
-section#newsletter {
+section#exhibitions div.wrapper div a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+section#newsletter img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    bottom: 0px;
+}
+
+section#newsletter div.wrapper {
+    position: relative;
+    bottom: 0;
+
+}
+
+
+section#newsletter div.wrapper h2 {
+    position: absolute;
+    color: #FFFFFF;
+    top: 0%;
+    padding: 20px;
+}
+
+section#newsletter div.wrapper  p {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    color: #FFFFFF;
+    top: 22%;
+    text-align: center;
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 18px;
+}
+
+section#newsletter .wrapper .container {
+    position: absolute;
+    top: 65%;
+    left: 46%;
+    transform: translate(-54%);
+}
+
+section#newsletter input {
+    width: auto;
+    height: 28px;
+    list-style: none;
+    text-align: center;
+}
+
+section#newsletter .btn {
+    background-color: #F19151;
+    height: 34px;
+    border: none;
+    width: 60px;
+    color: black;
+    display: inline-block;
+    position: absolute;
+}
+
+footer {
+    background-color: #2B5AAD;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    bottom: 0px;
+    margin: 0;
+}
+
+footer .wrapper {
+    position: relative;
+}
+
+footer img {
+    height: 90px;
+    left: 0px;
+    display: block;
+}
+
+footer .left {
+    display: flex;
+    flex-direction: row;
+}
+
+footer div h1{
+    position: relative;
+    display: block;
+    overflow-wrap: break-word;
+    width: 150px;
+    top: 5px;
+    color: #FFFFFF;
+}
+
+footer .socials {
+    display: inline-block;
+    position: absolute;
+    margin-top: 70px;
+    left: 70px;
+}
+
+footer .socials ul li{
+    left: 10px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    float: left;
+    color: #FFFFFF;
+}
+
+footer div nav {
     display: none;
+}
+
+footer .right {
+    padding-right: 20px;
+    right: 0;
+    top: 0;
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+} 
+
+footer p.title {
+    font-family: "Blinker", sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+
+footer p {
+    margin-top: -5px;
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding-top: -5px;
 }
