@@ -4,37 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <meta name="description" content="Come join us at the Community Science Museum where we’re committed to making science accessible to all." />
+    <script src="https://kit.fontawesome.com/7185a44500.js" crossorigin="anonymous"></script>
+    <link  href="style.css" rel="stylesheet">
+    <title>Visit Us</title>
 </head>
 <body>
-<section id="header">
-    <header>
-        <img src="Images/icon-1719742.svg" alt="CSM Logo" id="logo">
-        <h1 class="logo">Community Science Museum</h1>
-        <label for="hamburger-menu">
-            <i class="fas fa-bars"></i>
-        </label>
-        <input type="checkbox" id="hamburger-menu">
-        <nav id="header">
-            <ul>
-                <li>
-                    <a href="#">Exhibitions</a>
-                    <a href="#">Visit Us</a>
-                    <a href="#">News</a>
-                    <a href="#">Get Involved</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-</section>
+    <section id="header">
+        <header>
+            <div class="headerlogo"><a href="Index.html">
+                <img src="Images/icon-1719742.svg" alt="CSM Logo" id="logo">
+                <h1>Community Science Museum</h1>
+            </a>
+            </div>
+        <div class="menuwrap"> 
+            <input type="checkbox" class="hamburger-menu">
+           <div class="hamburger"><div></div></div>>
+            <div class="menu">
+                <div>
+                <nav id="header">
+                    <ul>
+                        <li>
+                            <a href="Exhibitions.html">Exhibitions</a>
+                            <a href="VisitUs.html">Visit Us</a>
+                            <a href="News.html">News</a>
+                            <a href="Getinvolved.html">Get Involved</a>
+                        </li>
+                    </ul>
+                </nav>
+                </div>
+            </div>
+        </div>
+        </header>
+        <div id="announcement">
+            <div id="header-bar">
+                <p>Energetica Exhibition is now open! More Information - Reserve tickets today</p>
+            </div>
+        </div>
+    </section>
 
-<section id="hero-bar">
-    <img src="/Images/william-bout-264826.jpg" alt="#">
-    <h4>Visit us</h4>
-</section>
+    <section id="hero">
+        <img src="Images/william-bout-264826.jpg" alt="#" class="hero-title">
+        <div class="color">
+         <h4>VISIT US</h4>
+        </div>
+    </section>
 
 <section id="main">
-    <div>
+    <div class="mobile">
+    <img src="Images/scott-webb-102825.jpg" alt="Museum sign" class="museum">
+    <div class="admision">
     <h2>Admision</h2>
     <p>The entrance is free for all.
  
@@ -43,33 +62,35 @@
         If you would like to organise a guided tour for your group of 6 or more people, please contact us to arrange the tour.
     </p>
     </div>
-    <div>
-    <h2>Opening Hours</h2>
-        <ul id="date">
-            <li>Monday</li>
-            <li>Tue-Thursday</li>
-            <li>Friday</li>
-            <li>Saturday</li>
-            <li>Sunday</li>
-        </ul>
-        <ul id="time">
-            <li>Closed</li>
-            <li>10:00-16:00</li>
-            <li>10:00-19:00</li>
-            <li>9:00-16:00</li>
-            <li>9:00-13:00</li>
-        </ul>
+    <div class="opening-hours">
+        <h2>Opening Hours</h2>
+        <div>
+            <ul class="date">
+                <li>Monday</li>
+                <li>Tue-Thursday</li>
+                <li>Friday</li>
+                <li>Saturday</li>
+                <li>Sunday</li>
+            </ul>
+        </div>
+        <div>
+            <ul class="time">
+                <li>Closed</li>
+                <li>10:00-16:00</li>
+                <li>10:00-19:00</li>
+                <li>9:00-16:00</li>
+                <li>9:00-13:00</li>
+            </ul>
+        </div>
     </div>
-    <div id="icons">
-        <ul class="fa-ul">
-            <li><span class="fa-li"><i class="#"></i></span>Free Parking</li>
-            <li><span class="fa-li"><i class="#"></i></span>Wheelchair friendly</li>
-            <li><span class="fa-li"><i class="#"></i></span>Cafe</li>
-            <li><span class="fa-li"><i class="#"></i></span>Gift Shop</li>
-        </ul>
+    <div class="icons">
+        <div class="freeparking"><div><i class="fas fa-parking fa-2x"></i></div><p>Free Parking</p></div>
+        <div class="wheelchair"><div><i class="fas fa-wheelchair fa-2x"></i></div><p>Wheelchair</p></div>
+        <div class="cafe"><div><i class="fas fa-coffee fa-2x"></i></div><p>Cafe</p></div>
+        <div class="giftshop"><div><i class="fas fa-gift fa-2x"></i></div><p>Gift Shop</p></div>
     </div>
-    <img src="Images/scott-webb-102825.jpg" alt="Museum sign">
-    <div>
+    
+    <div class="location">
         <h2>Location</h2>
         <p>The Community Science Museum is
             located at 
@@ -77,47 +98,51 @@
             in the heart of Bergen town.
         </p>
     </div>
-    <img src="Images/Skjermbilde 2021-11-28 kl. 16.28.57.png" alt="Map with location">
+    <img src="Images/Skjermbilde 2021-11-28 kl. 16.28.57.png" alt="Map with location" class="map">
+    </div>      
 </section>
 
-<section id="footer">
-    <div>
-    <h4>Community Science Museum</h4>
-    <img src="Images/icon-1719742.svg" alt="CSM Logo">
+<footer>
+    <div class="wrapper">
+        <div class="left">
+            <img src="Images/icon-1719742.svg" alt="CSM Logo">
+            <h1>Community Science Museum</h1>
+            <div class="socials">
+                <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fab fa-facebook-square fa-2x"></i></span></li>
+                <li><span class="fa-li"><i class="fab fa-instagram-square fa-2x"></i></span></li>
+                <li><span class="fa-li"><i class="fab fa-twitter-square fa-2x"></i></span></li>
+                </ul>
+            </div>
+        </div>
+    <div id="nav-footer">
+        <nav id="footer">
+            <ul>
+                <li>
+                    <a href="Exhibitions.html">Exhibitions</a>
+                    <a href="VisitUs.html">Visit Us</a>
+                    <a href="News.html">News</a>
+                    <a href="Getinvolved.html">Get Involved</a>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <div id="socials">
-        <ul class="fa-ul">
-            <li><span class="fa-li"><i class="#"></i></span></li>
-            <li><span class="fa-li"><i class="#"></i></span></li>
-            <li><span class="fa-li"><i class="#"></i></span></li>
-            <li><span class="fa-li"><i class="#"></i></span></li>
-        </ul>
+    <div class="right">
+        <div>
+        <p class="title">Visit Us</p>
+        <p>Community Science Museum
+            Bredalsmarken 15.<br>
+            Bergen, Norway
+        </p>
+        <p class="title">Contact Us</p>
+        <p>
+            95 15 95 85
+            info@csm.com
+        </p>
+        </div>
     </div>
-<div id="nav-footer">
-    <nav id="footer">
-        <ul>
-            <li>
-                <a href="#">Exhibitions</a>
-                <a href="#">Visit Us</a>
-                <a href="#">News</a>
-                <a href="#">Get Involved</a>
-            </li>
-        </ul>
-    </nav>
-</div>
-<div>
-    <h5>Visit Us</h5>
-    <p>Community Science Museum
-        Bredalsmarken 15.
-        Bergen, Norway
-    </p>
-    <h5>Contact Us</h5>
-    <p>
-        95 15 95 85
-        info@csm.com
-    </p>
-</div>
-
-</section>
+    </div>
+    <div class="clear"></div>
+    </footer>
 </body>
 </html>

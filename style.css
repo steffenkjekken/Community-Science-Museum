@@ -45,7 +45,7 @@ h1 {
 h2 {
     font-family: "Blinker", sans-serif;
     font-weight: normal;
-    color: #FFFFFF;
+    font-size: 24px;
 }
 
 h3 {
@@ -243,6 +243,7 @@ section#hero > div.tickets {
     height: 50px;
     left: 50%;
     top: 50%;
+    color: #FFFFFF;
     transform: translate(-50%,-50%);
     background: #F19151;
     border-radius: 10px;
@@ -316,6 +317,11 @@ section#boxes > div.wrapper > div > p {
 section#main > div.left-text,
 section#main > div.right-text {
     display: none;
+}
+
+section#main {
+    display: grid;
+    grid-template-columns: auto;
 }
 
 section#main > div.mobile {
@@ -409,6 +415,44 @@ section#main > div.mobile > div > div.textbox {
     margin-bottom: 20px;
 }
 
+section#main p {
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+section#main div.icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+}
+
+section#main div.icons div {
+    display: flex;
+    align-items: center;
+
+}
+
+section#main div.icons div div {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #61B07D;
+    margin: 20px;
+}
+
+section#main div.icons div div i {
+    display: block;
+    justify-content: center;
+
+}
+
+section#main img.map {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+}
+
 section#exhibitions img{
     width: 100%;
     height: 120px;
@@ -463,6 +507,7 @@ section#exhibition-page div.wrapper p.mobile {
 section#exhibition-page div.wrapper h2 {
     padding-left: 12px;
     padding-top: 5px;
+    color: #FFFFFF;
 }
 
 section#exhibition-page div.wrapper div.textbox {
