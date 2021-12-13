@@ -31,7 +31,7 @@ body {
 header { grid-area: top; background-color: #2B5AAD; }
 section#hero { grid-area: hero; }
 section#boxes { grid-area: boxes; }
-section#main { grid-area: info; }
+section#main, section#news { grid-area: info; }
 section#exhibitions, section#exhibition-page { grid-area: exhibitions; }
 section#newsletter { grid-area: newsletter; }
 footer { grid-area: bottom; background-color:#2B5AAD; }
@@ -462,6 +462,7 @@ section#main img.map {
     object-fit: cover;
 }
 
+
 section#exhibitions img{
     width: 100%;
     height: 120px;
@@ -489,7 +490,8 @@ section#exhibitions div.wrapper div a {
     color: #FFFFFF;
 }
 
-section#exhibition-page img {
+section#exhibition-page img,
+section#news img {
     width: 100%;
     height: 278px;
     margin: 0px;
@@ -504,7 +506,8 @@ section#exhibition-page div.wrapper p.desktop {
     display: none;
 }
 
-section#exhibition-page div.wrapper p.mobile {
+section#exhibition-page div.wrapper p.mobile,
+section#news div.wrapper p {
     font-family: "Darker Grotesque", sans-serif;
     font-size: 18px;
     color: #FFFFFF;
@@ -513,13 +516,15 @@ section#exhibition-page div.wrapper p.mobile {
     padding: 12px;
 }
 
-section#exhibition-page div.wrapper h2 {
+section#exhibition-page div.wrapper h2, 
+section#news div.wrapper h2{
     padding-left: 12px;
     padding-top: 5px;
     color: #FFFFFF;
 }
 
-section#exhibition-page div.wrapper div.textbox {
+section#exhibition-page div.wrapper div.textbox,
+section#news div.wrapper div.textbox {
     position: relative;
     height: 100%;
     width: 85%;
