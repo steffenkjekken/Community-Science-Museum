@@ -434,18 +434,27 @@ section#main div.icons div {
 }
 
 section#main div.icons div div {
-    height: 50px;
-    width: 50px;
+    height: 55px;
+    width: 55px;
     border-radius: 50%;
     background-color: #61B07D;
     margin: 20px;
 }
 
 section#main div.icons div div i {
-    display: block;
-    justify-content: center;
+   padding: 12px;
 
 }
+
+section#main div.icons div div i.fa-coffee {
+    padding: 8px;
+ 
+ }
+
+ section#main div.icons div div i.fa-parking {
+    padding: 14px;
+ 
+ }
 
 section#main img.map {
     height: 160px;
