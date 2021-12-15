@@ -31,7 +31,7 @@ body {
 header { grid-area: top; background-color: #2B5AAD; }
 section#hero { grid-area: hero; }
 section#boxes { grid-area: boxes; }
-section#main, section#news, section#info { grid-area: info; }
+section#main, section#news { grid-area: info; }
 section#exhibitions, section#exhibition-page { grid-area: exhibitions; }
 section#newsletter { grid-area: newsletter; }
 footer { grid-area: bottom; background-color:#2B5AAD; }
@@ -327,12 +327,16 @@ section#main > div.right-text {
     display: none;
 }
 
-section#main {
+section#main,
+section#kids,
+section#involved {
     display: grid;
     grid-template-columns: auto;
+    padding: 20px
 }
 
-section#main > div.mobile {
+section#main > div.mobile
+section#kids > div.mobile {
     position: relative;
     margin: 0 auto;
     padding: 10px;
@@ -367,7 +371,10 @@ section#main div.opening-hours > div > ul.time > li {
     font-family: "Blinker", sans-serif;
 }
 
-section#main img {
+section#main img,
+section#visit img,
+section#kids img,
+section#involved img{
     align-items: center;
     width: 100%;
     height: 300px;
@@ -428,8 +435,8 @@ section#main > div.mobile > div > div.textbox {
 
 section#main div.grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    grid-template-columns: 1fr repeat(2, max-content);
+    grid-gap: 20px;
     
 }
 
@@ -437,26 +444,31 @@ section#main div.grid img {
     object-position: right;
 }
 
-section#main p {
+section#main p,
+section#kids p,
+section#involved p {
     font-family: "Darker Grotesque", sans-serif;
     font-size: 18px;
     line-height: 18px;
 }
 
-section#main div.icons {
+section#main div.icons,
+section#main div.icons-visit {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     column-gap: 5px;
 }
 
-section#main div.icons div {
+section#main div.icons div,
+section#main div.icons-visit div {
     display: flex;
     align-items: center;
 
 }
 
-section#main div.icons div div {
+section#main div.icons div div,
+section#main div.icons-visit div div {
     height: 55px;
     width: 55px;
     border-radius: 50%;
@@ -464,17 +476,20 @@ section#main div.icons div div {
     margin: 20px;
 }
 
-section#main div.icons div div i {
+section#main div.icons div div i,
+section#main div.icons-visit div div i {
    padding: 12px;
 
 }
 
-section#main div.icons div div i.fa-coffee {
+section#main div.icons div div i.fa-coffee,
+section#main div.icons-visit div div i.fa-coffee {
     padding: 8px;
  
  }
 
- section#main div.icons div div i.fa-parking {
+ section#main div.icons div div i.fa-parking,
+ section#main div.icons-visit div div i.fa-parking {
     padding: 14px;
  
  }
@@ -513,8 +528,52 @@ section#exhibitions div h4 {
     padding: 0;
     margin-top: -80px;
     text-align: center;
-
 }
+
+section#exhibitions div.evolution::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 98.6px;
+    background: rgba(97, 176, 125, 0.5)
+  }
+  
+  section#exhibitions div.ecology::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 98.6px;
+      background: rgba(134, 251, 173, 0.5)
+  }
+  
+  section#exhibitions div.robotics::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 98.6px;
+      background: rgba(241, 148, 58, 0.5)
+  }
+  
+  section#exhibitions div.biology::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 98.6px;
+      background: rgba(71, 136, 247, 0.5)
+  }
+  
+  section#exhibitions div.cosmology::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 98.6px;
+      background: rgba(43, 90, 173, 0.5)
+  }
 
 section#exhibitions div a {
     text-decoration: none;
@@ -538,7 +597,7 @@ section#exhibition-page p.desktop {
 }
 
 section#exhibition-page p.mobile,
-section#news div.wrapper p {
+section#news p {
     font-family: "Darker Grotesque", sans-serif;
     font-size: 18px;
     color: #FFFFFF;
@@ -548,16 +607,16 @@ section#news div.wrapper p {
 }
 
 section#exhibition-page h2, 
-section#news div.wrapper h2{
+section#news h2{
     padding-left: 12px;
     padding-top: 5px;
     color: #FFFFFF;
 }
 
 section#exhibition-page div.textbox,
-section#news div.wrapper div.textbox {
+section#news div.textbox {
     position: relative;
-    height: 100%;
+    height: fit-content;
     width: 85%;
     background-color: #F19151;
     top: -60px;
@@ -628,6 +687,38 @@ section#newsletter .btn {
     color: black;
     display: inline-block;
     position: absolute;
+}
+
+section#kids {
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 1fr;
+    grid-template-rows: 0.8fr 0.4fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+section#kids img:nth-child(1) {
+    grid-column-start: span 3;
+}
+
+section#kids img:nth-child(4) {
+    grid-column-start: 3;
+}
+
+section#kids p:nth-child(3) {
+    grid-column-start: span 2;
+}
+
+section#kids p:nth-child(6) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+section#kids h2 {
+    grid-column-start: span 3;
+}
+
+section#kids p {
+    margin-top: 0;
 }
 
 footer {
@@ -719,9 +810,12 @@ footer p {
 
 @media (min-width: 640px) {
 
+
+
 body {
     
 }
+
 
 div.menuwrap {
     display: none;
@@ -779,11 +873,11 @@ div.menuwrap {
 }
 
 
-section#hero#Exhibitions.html{background-color:rgba(241, 148, 58, 0.65);}
-section#hero#ForKids.html{background-color:rgba(241, 148, 58, 0.65);}
-section#hero#Getinvolved.html{background-color:rgba(241, 148, 58, 0.65);}
-section#hero#News.html{background-color:rgba(241, 148, 58, 0.65);}
-section#hero#VisitUs.html{background-color:rgba(241, 148, 58, 0.65);}
+section#hero div{background-color:rgba(241, 148, 58, 0.65);}
+section#hero div{background-color:rgba(241, 148, 58, 0.65);}
+section#hero div{background-color:rgba(241, 148, 58, 0.65);}
+section#hero div{background-color:rgba(241, 148, 58, 0.65);}
+section#hero div{background-color:rgba(241, 148, 58, 0.65);}
 
 section#hero img.hero-title {
     display: block;
@@ -792,8 +886,13 @@ section#hero img.hero-title {
     padding-bottom: 50px;
 }
 
-section#hero div.color {
-    background-color: rgba(241, 148, 58, 0.65);
+section#hero div.color,
+section#hero div.color1,
+section#hero div.color2,
+section#hero div.color3,
+section#hero div.color4,
+section#hero div.color5 {
+    background-color: unset;
     text-align: left;
     width: 100%;
     height: 120px;
@@ -801,11 +900,42 @@ section#hero div.color {
     top: 0px;
 }
 
+section#hero div.color1 {
+    background-color: rgba(241, 148, 58, 0.65);
+    width: 100%;
+    height: 120px;
+}
+
+section#hero div.color2 {
+    background-color: rgba(71, 136, 247, 0.65);
+    width: 100%;
+    height: 120px;
+}
+
+section#hero div.color3 {
+    background-color: rgba(134, 251, 173, 0.65);
+    width: 100%;
+    height: 120px;
+}
+
+section#hero div.color4 {
+    background-color: rgba(43, 90, 173, 0.65);
+    width: 100%;
+    height: 120px;
+}
+
+section#hero div.color5 {
+    background-color: rgba(97, 176, 125, 0.65);
+    width: 100%;
+    height: 120px;
+}
+
 section#hero h4 {
     display: inline-block;
     position: relative;
-    padding: 10px;
-    bottom: -30px
+    padding-left: 10px;
+    bottom: 20px;
+    font-size: 4vw;
 }
 
 
@@ -843,7 +973,6 @@ section#boxes div p {
 section#main div.left-text,
 section#main div.right-text {
     display: block;
-    padding: 25px;
 }
 
 section#main div.mobile {
@@ -854,8 +983,22 @@ section#main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
-    margin-top: -50px;
+    padding: 25px;
     margin-bottom: -50px;
+    margin-top: -50px;
+}
+
+section#main .admision p,
+section#main .location p,
+section#main img {
+    padding: 10px;
+    margin-top: 0;
+
+}
+
+section#main h2 {
+    margin-bottom:0;
+    padding-left: 10px;
 }
 
 section#main p {
@@ -867,6 +1010,10 @@ section#main p {
 div#directions img {
     height: 200px;
     object-fit: cover;
+}
+
+div#directions h2 {
+    padding-left: 0;
 }
 
 section#main div.opening-hours h2 {
@@ -886,7 +1033,8 @@ section#main div.icons {
     grid-gap: 2px;
 }
 
-section#main div.icons div div {
+section#main div.icons div div,
+section#main div.icons-visit div div {
     height: 55px;
     width: 55px;
     border-radius: 50%;
@@ -894,39 +1042,108 @@ section#main div.icons div div {
     margin: 10px;
 }
 
-section#main div.icons div p { 
+
+section#main div.icons div p,
+section#main div.icons-visit div p { 
     margin-top: 15px;
 }
 
 section#exhibitions {
+    display: grid;
     box-sizing: border-box;
     grid-template-columns:repeat(5, 1fr);
+    grid-template-rows: 1fr;
     grid-gap: 0;
     width: auto;
+    grid-area: auto;
 }
 
 section#exhibitions img {
+    display: ;
     height: 30vw;
     max-width: 100%;
     min-width: 0;
+    grid-column-start: 1;
 }
 
 section#exhibitions div {
     white-space: nowrap;
+    position: relative;
     
 }
 
 section#exhibitions div h4 {
+    display: grid;
     font-size: 2vw;
-    grid-template-columns: 1fr;
     width: 100%;
     text-align: center;
+    top: -75px;
 }
+
+section#exhibitions a{
+    z-index: 1;
+}
+
+section#exhibitions div.evolution img {
+    object-position: 33%;
+}
+
+section#exhibitions div.evolution::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30vw;
+  background: rgba(97, 176, 125, 0.5)
+}
+
+section#exhibitions div.ecology::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30vw;
+    background: rgba(134, 251, 173, 0.5)
+}
+
+section#exhibitions div.robotics::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30vw;
+    background: rgba(241, 148, 58, 0.5)
+}
+
+section#exhibitions div.biology::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30vw;
+    background: rgba(71, 136, 247, 0.5)
+}
+
+section#exhibitions div.cosmology::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30vw;
+    background: rgba(43, 90, 173, 0.5)
+}
+
+section#exhibitions div:hover {
+    filter:blur(90)
+
+}
+
 
 section#exhibition-page {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px
+    grid-gap: 20px;
+    margin-top: -40px;
 }
 
 section#exhibition-page h2 {
@@ -991,6 +1208,111 @@ section#newsletter .wrapper .container {
 
 section#newsletter .wrapper .container input {
     width: 200px;
+}
+
+section#news {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 50px;
+    padding: 20px;
+    margin-top: -50px;
+}
+
+section#news img {
+    padding: 0;
+}
+
+section#news h2 {
+    padding-bottom: 10px;
+}
+
+section#news div.textbox,
+section#involved div.textbox {
+    background-color: #4788F7;
+    top: 0;
+    width: 100%;
+    left: 0;
+    transform: unset;
+    height: 100%;
+}
+
+section#kids {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.7fr;
+}
+
+section#kids img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+section#kids img:nth-child(1) {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 5;
+}
+
+section#kids img:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    object-position: top;
+}
+
+section#kids img:nth-child(5) {
+    grid-column-start: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-end: 5;
+}
+
+section#kids p:nth-child(3) {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-column-end: 3;
+}
+
+section#kids p:nth-child(6) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+}
+
+section#kids h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+}
+
+section#kids p {
+    margin-top: 0;
+}
+
+section#involved img {
+    height: 100%;
+}
+
+section#involved {
+    margin-top: -50px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+section#involved h2,
+section#involved p {
+    color: #FFFFFF;
+    padding: 5px;
+}
+
+section#involved img {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
 }
 
 footer {
