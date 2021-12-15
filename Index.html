@@ -19,11 +19,11 @@
         </div>
     <div class="menuwrap"> 
         <input type="checkbox" class="hamburger-menu">
-       <div class="hamburger"><div></div></div>>
+       <div class="hamburger"><div></div></div>
         <div class="menu">
             <div>
             <nav id="header">
-                <ul>
+                <ul class="mobile">
                     <li>
                         <a href="Exhibitions.html">Exhibitions</a>
                         <a href="VisitUs.html">Visit Us</a>
@@ -35,12 +35,23 @@
             </div>
         </div>
     </div>
-    </header>
+    <nav id=desktop>
+        <ul>
+            <li>
+                <a href="Exhibitions.html">Exhibitions</a>
+                <a href="VisitUs.html">Visit Us</a>
+                <a href="News.html">News</a>
+                <a href="Getinvolved.html">Get Involved</a>
+            </li>
+        </ul>
+    </nav>
+    
     <div id="announcement">
         <div id="header-bar">
-            <p>Energetica Exhibition is now open! More Information - Reserve tickets today</p>
+            <p>Energetica Exhibition is now open! <a href="../Community-Science-Museum/News.html">More Information</a> - Reserve tickets today</p>
         </div>
     </div>
+</header>
 </section>
 
 <section id="hero">
@@ -60,14 +71,13 @@
         </h2>
     </div>
     <div class="tickets">
-        <h2>RESERVE TICKETS NOW</h2>
+        <h2><a href="#">RESERVE TICKETS NOW</a></h2>
     </div>
 </section>
 
 <section id="boxes">
-    <div class="wrapper">
         <div>
-            <h3><a href="#">FOR KIDS</a></h3>
+            <h3><a href="../Community-Science-Museum/ForKids.html">FOR KIDS</a></h3>
             <p>
             Are you a young person looking to 
             learn more about science?
@@ -76,7 +86,7 @@
         <div>
             <h3><a href="#">FOR TEACHERS</a></h3>
             <p>
-            As a community-driven museum, we want to work with schools to create places of learning and exploring.
+            We want to work with schools to create places of learning and exploring.
             </p>
         </div>
         <div>
@@ -85,7 +95,6 @@
             Are you looking to get involved with our team of researchers and academics?
             </p>
         </div>
-    </div>
 </section>
 
 <section id="main">
@@ -94,7 +103,7 @@
             <h3>Explore together</h3>
             <p>
                 Come join us at the Community Science Museum where we’re committed to making science accessible to all.
-
+            
                 Over the course of human history, science has developed from our early understanding of fire, wind, water, and earth to exploring everything from galaxies far away to the very building blocks of life itself.
 
                 The aim of our museum is to create a space where everyone can experience the wonders of our discoveries and perhaps even ignite a lifelong passion to continue the exploration of the world around us.
@@ -106,8 +115,15 @@
                 Many of these exhibits are designed for you to interact with and play around to see science come to life 
                 (apart from the dinosaur exhibits – they only come to life at night when everyone’s gone home).
             </p>
-            <div id="video">
-                <div></div>
+            <div id="directions">
+                <h2>Directions</h2>
+                <p>
+                    
+                    Community Science Museum
+                    Bredalsmarken 15.
+                    Bergen, Norway
+                </p>
+                <img src="../Community-Science-Museum/Images/Skjermbilde 2021-11-28 kl. 16.28.57.png">
             </div>
         </div>
     </div>
@@ -122,38 +138,31 @@
             If you would like to organise a guided tour for your group of 6 or more people, please contact us to arrange the tour.
         </p>
     </div>
-    <div id="opening-hours">
-        <h3>Opening Hours</h3>
-        <ul id="date">
-            <li>Monday</li>
-            <li>Tue-Thursday</li>
-            <li>Friday</li>
-            <li>Saturday</li>
-            <li>Sunday</li>
-        </ul>
-        <ul id="time">
-            <li>Closed</li>
-            <li>10:00-16:00</li>
-            <li>10:00-19:00</li>
-            <li>9:00-16:00</li>
-            <li>9:00-13:00</li>
-        </ul>
-    </div>
-    <div id="directions">
-        <p>
-            Community Science Museum
-            Bredalsmarken 15.
-            Bergen, Norway
-        </p>
+    <div class="opening-hours">
+        <h2>Opening Hours</h2>
+        <div>
+            <ul class="date">
+                <li>Monday</li>
+                <li>Tue-Thursday</li>
+                <li>Friday</li>
+                <li>Saturday</li>
+                <li>Sunday</li>
+            </ul>
+            <ul class="time">
+                <li>Closed</li>
+                <li>10:00-16:00</li>
+                <li>10:00-19:00</li>
+                <li>9:00-16:00</li>
+                <li>9:00-13:00</li>
+            </ul>
+        </div>
     </div>
     
-    <div id="icons">
-        <ul class="fa-ul">
-            <li><span class="fa-li"><i class="#"></i></span>Free Parking</li>
-            <li><span class="fa-li"><i class="#"></i></span>Wheelchair friendly</li>
-            <li><span class="fa-li"><i class="#"></i></span>Cafe</li>
-            <li><span class="fa-li"><i class="#"></i></span>Gift Shop</li>
-        </ul>
+    <div class="icons">
+        <div class="freeparking"><div><i class="fas fa-parking fa-2x"></i></div><p>Free Parking</p></div>
+        <div class="wheelchair"><div><i class="fas fa-wheelchair fa-2x"></i></div><p>Wheelchair</p></div>
+        <div class="cafe"><div><i class="fas fa-coffee fa-2x"></i></div><p>Cafe</p></div>
+        <div class="giftshop"><div><i class="fas fa-gift fa-2x"></i></div><p>Gift Shop</p></div>
     </div>
 </div>
 <div class="mobile">
@@ -167,8 +176,6 @@
                     <li>Saturday</li>
                     <li>Sunday</li>
                 </ul>
-            </div>
-            <div>
                 <ul class="time">
                     <li>Closed</li>
                     <li>10:00-16:00</li>
@@ -197,9 +204,9 @@
 </div>
 </section>
 <section id="exhibitions">
-    <div class="wrapper">
-        <div class="evolution"><div class="overlay"></div><img src="Images/skeleton-414543_1920.jpg" alt="Skeleton Display">
+        <div class="evolution"><img src="Images/skeleton-414543_1920.jpg" alt="Skeleton Display">
             <h4><a href="#">EVOLUTION</a></h4>
+        </div>
         </div>
         <div class="ecology"><img src="Images/genoa-956405_1920.jpg" alt="Ant Exhibition">
             <h4><a href="#">ECOLOGY</a></h4>
@@ -208,12 +215,11 @@
             <h4><a href="#">ROBOTICS & AI</a></h4>
         </div>
         <div class="biology"><img src="Images/samuel-zeller-113381.jpg" alt="Cross section of human">
-            <h4><a href="#">BIOLOGY & MEDICINE</a></h4>
+            <h4><a href="#">BIOLOGY</a></h4>
         </div>
         <div class="cosmology"><img src="Images/image-from-rawpixel-id-441103-jpeg.jpg" alt="Solar system">
             <h4><a href="#">COSMOLOGY</a></h4>
         </div>
-    </div>
 </section>
 <section id="newsletter">
     <div class="wrapper">
@@ -229,16 +235,15 @@
     </div>
 </section>
 <footer>
-<div class="wrapper">
     <div class="left">
         <img src="Images/icon-1719742.svg" alt="CSM Logo">
         <h1>Community Science Museum</h1>
         <div class="socials">
-            <ul class="fa-ul">
-            <li><span class="fa-li"><i class="fab fa-facebook-square fa-2x"></i></span></li>
-            <li><span class="fa-li"><i class="fab fa-instagram-square fa-2x"></i></span></li>
-            <li><span class="fa-li"><i class="fab fa-twitter-square fa-2x"></i></span></li>
-            </ul>
+        <ul class="fa-ul">
+            <li><span class="fa-li"><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></span></li>
+            <li><span class="fa-li"><a href="#"><i class="fab fa-instagram-square fa-2x"></a></i></span></li>
+            <li><span class="fa-li"><a href="#"><i class="fab fa-twitter-square fa-2x"></a></i></span></li>
+        </ul>
         </div>
     </div>
 <div id="nav-footer">
@@ -257,18 +262,18 @@
     <div>
     <p class="title">Visit Us</p>
     <p>Community Science Museum
-        Bredalsmarken 15.<br>
+        Bredalsmarken 15.
         Bergen, Norway
     </p>
+    </div>
+    <div>
     <p class="title">Contact Us</p>
-    <p>
-        95 15 95 85
-        info@csm.com
+    <p>95 15 95 85
+    info@csm.com
     </p>
     </div>
 </div>
 </div>
-<div class="clear"></div>
 </footer>
 
 </body>
