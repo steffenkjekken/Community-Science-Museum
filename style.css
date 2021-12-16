@@ -1,8 +1,8 @@
 @font-face {
-    font-family: "MuseoModerno", cursive;
+    font-family: "MuseoModerno", sans-serif;
     src: url("../Community-Science-Museum/fonts/MuseoModerno/MuseoModerno-VariableFont_wght.ttf") format("truetype supports variations"),
         url("../Community-Science-Museum/fonts/MuseoModerno/MuseoModerno-VariableFont_wght.ttf") format("truetype-variations");
-        font-weight: 100 1000%;
+        font-weight: 100 1000;
 
     font-family: "Darker Grotesque", sans-serif;
     src: url("../Community-Science-Museum/fonts/Darker_Grotesque/DarkerGrotesque-Regular.ttf") format("truetype");
@@ -805,7 +805,6 @@ footer p {
     font-family: "Darker Grotesque", sans-serif;
     font-size: 2vw;
     color: #FFFFFF;
-    padding-top: -5px;
 }
 
 @media (min-width: 640px) {
@@ -1059,7 +1058,7 @@ section#exhibitions {
 }
 
 section#exhibitions img {
-    display: ;
+    display: block;
     height: 30vw;
     max-width: 100%;
     min-width: 0;
@@ -1134,7 +1133,7 @@ section#exhibitions div.cosmology::before {
 }
 
 section#exhibitions div:hover {
-    filter:blur(90)
+    filter:brightness(1.1)
 
 }
 
