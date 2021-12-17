@@ -1647,6 +1647,7 @@ section#kids img:nth-child(4) {
     grid-row-start: 1;
     grid-row-end: 1;
     object-position: top;
+    height: 250px;
 }
 
 section#kids img:nth-child(5) {
@@ -1655,6 +1656,7 @@ section#kids img:nth-child(5) {
     grid-row-start: 1;
     grid-row-end: 1;
     object-position: top;
+    height: 250px;
 }
 
 section#kids p:nth-child(3) {
