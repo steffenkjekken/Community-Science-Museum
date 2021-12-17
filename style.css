@@ -745,6 +745,12 @@ footer .left {
     clear: both;
 }
 
+footer .left a {
+    text-decoration: none;
+    height: min-content;
+    width: min-content;
+}
+
 footer div h1{
     position: relative;
     display: block;
@@ -1683,7 +1689,6 @@ footer {
 
 footer div.left h1 {
     max-width: 400px;
-    width: 265px;
     max-height: 150px;
     font-size: 26px;
     top: unset;
