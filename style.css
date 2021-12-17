@@ -1,15 +1,3 @@
-@font-face {
-    font-family: "MuseoModerno", sans-serif;
-    src: url("../Community-Science-Museum/fonts/MuseoModerno/MuseoModerno-VariableFont_wght.ttf") format("truetype supports variations"),
-        url("../Community-Science-Museum/fonts/MuseoModerno/MuseoModerno-VariableFont_wght.ttf") format("truetype-variations");
-        font-weight: 100 1000;
-
-    font-family: "Darker Grotesque", sans-serif;
-    src: url("../Community-Science-Museum/fonts/Darker_Grotesque/DarkerGrotesque-Regular.ttf") format("truetype");
-
-    font-family: "Blinker", sans-serif;
-    src: url("../Community-Science-Museum/fonts/Blinker/Blinker-Regular.ttf") format("truetype");
-}
 
 /*mobile first*/
 
