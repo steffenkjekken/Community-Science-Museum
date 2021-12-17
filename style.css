@@ -1568,7 +1568,6 @@ section#main div.admision {
 section#main div.opening-hours {
     grid-column-start: 2;
     grid-row-start: 1;
-    margin-left: 50px;
 }
 
 section#main div.location {
@@ -1598,7 +1597,6 @@ section#main div.opening-hours > div {
 }
 
 section#main div.opening-hours > div > ul {
-    padding-left: 20px;
     white-space: nowrap;
 }
 
