@@ -31,7 +31,7 @@ body {
 header { grid-area: top; background-color: #2B5AAD; }
 section#hero { grid-area: hero; }
 section#boxes { grid-area: boxes; }
-section#main, section#news { grid-area: info; }
+section#main, section#news, section#involved { grid-area: info; }
 section#exhibitions, section#exhibition-page { grid-area: exhibitions; }
 section#newsletter { grid-area: newsletter; }
 footer { grid-area: bottom; background-color:#2B5AAD; }
@@ -46,14 +46,14 @@ h1 {
 h2 {
     font-family: "Blinker", sans-serif;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 40px;
 }
 
 h3 {
     font-family: "Blinker", sans-serif;
     font-weight: normal;
     color:black;
-    font-size: 40px;
+    font-size: 5vw;
 }
 
 h4 {
@@ -183,7 +183,7 @@ header .headerlogo h1 {
 .menuwrap .menu > div {
     background: #2B5AAD;
     width: 200vw;
-    height: 200vw;
+    height: 220vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -260,6 +260,7 @@ section#hero > div.tickets > h2 {
     text-align: center;
     bottom: 8px;
     display: block;
+    font-size: 24px;
 }
 
 section#hero > div.tickets > h2 > a {
@@ -271,7 +272,11 @@ section#hero img.hero-title {
     display: none;
 }
 
-section#hero div.color {
+section#hero div.color1,
+section#hero div.color2,
+section#hero div.color3,
+section#hero div.color4,
+section#hero div.color5 {
     text-align: center;
     left: 50%;
     transform: translate(-50%);
@@ -300,12 +305,12 @@ section#boxes > div {
     height: 68px;
 } 
 
-section#boxes > div > h3 {
+section#boxes > div > h2 {
     margin: 0;
     vertical-align: middle;
 }
 
-section#boxes > div > h3 > a{
+section#boxes > div > h2 > a{
     text-decoration: none;
     color: #FFFFFF;
 }
@@ -352,8 +357,6 @@ section#main div.opening-hours > div {
 }
 
 section#main div.opening-hours > h2 { 
-    margin: 0;
-    padding: 10px;
     color: black;
 }
 
@@ -388,14 +391,14 @@ section#main > div.mobile > div.container {
     position: relative;
 }
 
-section#main > div.mobile > div > div.cta >  h2 > a,
-section#main > div.mobile > div > div.textbox >  h2 > a
+section#main > div.mobile > div > div.cta >  h3 > a,
+section#main > div.mobile > div > div.textbox >  h3 > a
  {
     text-decoration: none;
     color: #FFFFFF;
 }
 
-section#main > div.mobile > div > div.textbox >  h2 {
+section#main > div.mobile > div > div.textbox >  h3 {
     margin: 0;
     margin-bottom: -15px;
     padding-top: 10px;
@@ -452,12 +455,16 @@ section#involved p {
     line-height: 18px;
 }
 
-section#main div.icons,
+section#main div.icons {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 5px;
+}
+
 section#main div.icons-visit {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 5px;
 }
 
 section#main div.icons div,
@@ -498,6 +505,8 @@ section#main img.map {
     height: 160px;
     width: 100%;
     object-fit: cover;
+    position: relative;
+    top: 32px;
 }
 
 section#exhibitions {
@@ -596,8 +605,7 @@ section#exhibition-page p.desktop {
     display: none;
 }
 
-section#exhibition-page p.mobile,
-section#news p {
+section#exhibition-page p.mobile {
     font-family: "Darker Grotesque", sans-serif;
     font-size: 18px;
     color: #FFFFFF;
@@ -607,7 +615,9 @@ section#news p {
 }
 
 section#exhibition-page h2, 
-section#news h2{
+section#news h2,
+section#involved h2{
+    font-size: 3vw;
     padding-left: 12px;
     padding-top: 5px;
     color: #FFFFFF;
@@ -646,7 +656,7 @@ section#newsletter div.wrapper {
 }
 
 
-section#newsletter div.wrapper h2 {
+section#newsletter div.wrapper h3 {
     position: absolute;
     color: #FFFFFF;
     top: 0%;
@@ -722,13 +732,12 @@ section#kids p {
 }
 
 footer {
-    display: block;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     position: relative;
-    flex-direction: column;
     width: 100%;
-    height: 10rem;
-    overflow:hidden;
-    top: 0;
+    height: 7rem;
+    overflow: hidden;
 }
 
 footer .wrapper {
@@ -744,7 +753,6 @@ footer img {
 footer .left {
     display: flex;
     flex-direction: row;
-    height: 100%;
     clear: both;
 }
 
@@ -752,7 +760,7 @@ footer div h1{
     position: relative;
     display: block;
     overflow-wrap: break-word;
-    max-width: 180px;
+    width: 10em;
     top: 5px;
     color: #FFFFFF;
     margin-top: 10px;
@@ -762,15 +770,17 @@ footer div h1{
 footer .socials {
     display: inline-block;
     position: absolute;
-    margin-top: 50px;
-    left: 70px;
+    top: 35px;
+    left: 75px;
+}
+
+footer .socials i::before {
+    font-size: 20px;
 }
 
 footer .socials ul li{
-    left: 10px;
-    padding: 25px;
+    padding: 15px;
     display: flex;
-    justify-content: space-between;
     float: left;
     color: #FFFFFF;
 }
@@ -780,28 +790,24 @@ footer .socials li a {
     color: #FFFFFF;
 }
 
-footer div nav {
+#nav-footer {
     display: none;
 }
 
 footer .right {
-    padding-right: 20px;
-    right: 0;
-    top: 0;
-    position: absolute;
-    max-width: 150px;
+   display: grid;
+   height: 0;
+
 } 
 
 footer p.title {
     font-family: "Blinker", sans-serif;
     font-size: 3vw;
     color: #FFFFFF;
-    margin-top: 10px;
-    margin-bottom: -5px;
+    margin-bottom: -10px;
 }
 
 footer p {
-    margin-top: -5px;
     font-family: "Darker Grotesque", sans-serif;
     font-size: 2vw;
     color: #FFFFFF;
@@ -812,7 +818,7 @@ footer p {
 
 
 body {
-    
+    max-width: 1020px;
 }
 
 
@@ -871,18 +877,33 @@ div.menuwrap {
     color: inherit;
 }
 
+section#hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
 
-section#hero div{background-color:rgba(241, 148, 58, 0.65);}
-section#hero div{background-color:rgba(241, 148, 58, 0.65);}
-section#hero div{background-color:rgba(241, 148, 58, 0.65);}
-section#hero div{background-color:rgba(241, 148, 58, 0.65);}
-section#hero div{background-color:rgba(241, 148, 58, 0.65);}
+section#hero picture {
+    grid-column-start: span 3;
+}
+
+section#hero div.left {
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    background-color: rgba(255, 140, 26, 0.6);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
 
 section#hero img.hero-title {
     display: block;
-    height: 120px;
+    grid-column-start: span 3;
     object-fit: cover; object-position: top;
     padding-bottom: 50px;
+    height: 120px;
 }
 
 section#hero div.color,
@@ -937,6 +958,14 @@ section#hero h4 {
     font-size: 4vw;
 }
 
+section#hero div.left h2 {
+    color: #FFFFFF;
+    font-size: 4vw;
+    padding: 25px;
+    line-height: 140%;
+    font-weight: 300;
+    margin-top: -15px;
+}
 
 .tickets {
     display: none;
@@ -953,7 +982,7 @@ section#boxes > div {
     text-align: left;
 }
 
-section#boxes div h3{
+section#boxes div h2{
     padding: 5px;
     font-size: 3vw;
     padding-left: 25px;
@@ -983,8 +1012,6 @@ section#main {
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
     padding: 25px;
-    margin-bottom: -50px;
-    margin-top: -50px;
 }
 
 section#main .admision p,
@@ -993,11 +1020,6 @@ section#main img {
     padding: 10px;
     margin-top: 0;
 
-}
-
-section#main h2 {
-    margin-bottom:0;
-    padding-left: 10px;
 }
 
 section#main p {
@@ -1009,6 +1031,7 @@ section#main p {
 div#directions img {
     height: 200px;
     object-fit: cover;
+    padding-left: 0;
 }
 
 div#directions h2 {
@@ -1027,9 +1050,15 @@ section#main div.opening-hours > div > ul > li {
 section#main div.icons {
     padding-left: 10px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 2px;
+    margin-top: 60px;
+}
+
+section#main div.icons-visit {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 115px;
 }
 
 section#main div.icons div div,
@@ -1054,7 +1083,7 @@ section#exhibitions {
     grid-template-rows: 1fr;
     grid-gap: 0;
     width: auto;
-    grid-area: auto;
+    margin-top: unset;
 }
 
 section#exhibitions img {
@@ -1068,6 +1097,7 @@ section#exhibitions img {
 section#exhibitions div {
     white-space: nowrap;
     position: relative;
+    margin-bottom: -10px;
     
 }
 
@@ -1082,6 +1112,7 @@ section#exhibitions div h4 {
 section#exhibitions a{
     z-index: 1;
 }
+
 
 section#exhibitions div.evolution img {
     object-position: 33%;
@@ -1143,11 +1174,11 @@ section#exhibition-page {
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
     margin-top: -40px;
+
 }
 
 section#exhibition-page h2 {
     font-size: 4.4vw;
-    margin-bottom: 20px;
     white-space: pre;
     position: relative;
     bottom: 40px;
@@ -1196,8 +1227,8 @@ section#newsletter div.wrapper p {
     position:absolute;
     left: 50%;
     transform: translate(-50%);
-    top: 20px;
     font-size: 2.5vw;
+    margin-top: 0px;
 
 }
 
@@ -1223,12 +1254,29 @@ section#news img {
 }
 
 section#news h2 {
-    padding-bottom: 10px;
+    font-size: 3vw;
+    margin-top: 0px;
+    color: #FFFFFF;
+}
+
+section#news p {
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 18px;
+    padding: 12px;
+}
+
+section#news div.textbox {
+    background-color: #2B5AAD;
+}
+
+section#involved div.textbox {
+    background-color: #61B07D;
 }
 
 section#news div.textbox,
 section#involved div.textbox {
-    background-color: #4788F7;
     top: 0;
     width: 100%;
     left: 0;
@@ -1302,10 +1350,13 @@ section#involved {
     grid-gap: 20px;
 }
 
-section#involved h2,
+section#involved h2 {
+    margin: 0;
+}
+
 section#involved p {
     color: #FFFFFF;
-    padding: 5px;
+    padding: 12px;
 }
 
 section#involved img {
@@ -1316,7 +1367,8 @@ section#involved img {
 
 footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 10rem;
 }
 
 footer div.left h1 {
@@ -1325,19 +1377,17 @@ footer div.left h1 {
 }
 
 footer .right {
-    right: 120px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
-    padding: 10px;
-    white-space: pre-line;
 }
 footer .right p.title {
     font-size: 2vw;
 }
 
 footer .right p {
-    font-size: 1.5vw;
+    font-size: 2vw;
+    padding-right: 20px;
 }
 
 footer .right div {
@@ -1345,7 +1395,288 @@ footer .right div {
 }
 
 footer .socials {
+    top: 40%;
+}
+
+footer .socials ul li {
+    padding: 20px;
+}
+
+
+footer .socials i::before {
+    font-size: 30px;
+}
+
+}
+
+@media (min-width: 1024px) {
+
+body {
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: 1280px;
+    grid-template-areas:
+        'top''top''top'
+        'hero''hero''hero'
+        'boxes''boxes''boxes'
+        'info''info'
+        'exhibitions''exhibitions''exhibitions'
+        'newsletter'
+        'bottom''bottom';
+}
+
+#desktop {
+    top: 15%;
+    position: absolute;
+}
+
+#dekstop p {
+    font-size: 22px;
+}
+
+#desktop ul li a {
+    padding: 30px;
+    font-size: 22px;
+}
+
+section#hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+section#hero img {
+    grid-column-start: span 3;
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+section#hero div.left {
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    background-color: rgba(255, 140, 26, 0.6);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    max-height: 500px;
+}
+
+section#hero div.left h2 {
+    color: #FFFFFF;
+    font-size: 42px;
+    font-weight: 300;
+    height: 500px;
+    width: 280px;
+    padding: 25px;
+}
+
+section#hero h4 {
+    margin-top: 15px;
+    bottom: unset;
+}
+
+section#boxes div {
+    max-height: 180px;
+}
+
+section#boxes div h2 {
+    font-size: 40px;
+}
+
+section#boxes div p {
+    font-size: 24px;
+}
+
+section#main, 
+section#news,
+section#exhibition-page,
+section#involved {
+    padding-left: 200px;
+    padding-right: 200px;
+    margin: 0px auto;
+}
+
+section#newsletter div.wrapper h3{
+    padding-left: 70px;
+    margin-top: 10px;
+}
+
+section#newsletter div.wrapper p {
+    text-align: left;
+    font-size: 18px;
+    width: 260px;
+    height: 210px;
+    padding-left: 70px;
+    margin-top: 35px;
+    white-space: normal;
+    left: unset;
+    right: unset;
+    transform: unset;
+}
+
+section#newsletter .wrapper .container {
+    top:50%;
+    left: 50%;
+}
+section#newsletter .wrapper .container input {
+    width: 300px;
+}
+
+section#newsletter h3{
+    font-size: 44px;
+}
+
+section#exhibition-page {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px 30px 50px 30px;
+    max-width: 1200px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section#exhibition-page img {
+    width: 100%;
+    height: 480px;
+    margin: 0px;
+    padding-bottom: 0;
+    object-fit: cover;
+    box-sizing: border-box;
+    display: grid;
+}
+
+section#exhibition-page div {
+    position: relative;
+}
+section#exhibition-page div h2 {
+    white-space: unset;
+    font-size: 2.5vw;
+}
+section#exhibition-page div p.desktop {
+    font-size: 1.5vw;
+    line-height: 1;
+    margin-top: 20px;
+}
+
+section#exhibition-page div .textbox {
+    display: grid;
+    white-space: nowrap;
+    width: auto;
+    margin-right: 20px;
+}
+
+section#main div.admision {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+section#main div.opening-hours {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+section#main div.location {
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+section#main div.icons-visit {
+    grid-template-columns: 1fr;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    margin-top: 0;
+}
+
+section#main img.map {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+section#main img.musuem {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+section#main div.opening-hours > div {
+    display: inline-flex;
+}
+
+section#main div.opening-hours > div > ul {
+    padding-left: 20px;
+    white-space: nowrap;
+}
+
+section#news h2 {
+    margin-bottom: -20px;
+}
+
+section#news div.textbox,
+section#involved div.textbox {
+    background-color: unset;
+}
+
+section#news h2,
+section#news p,
+section#involved h2,
+section#involved p {
+    color: black;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 11rem;
+}
+
+footer div.left h1 {
+    max-width: 400px;
+    width: 265px;
+    max-height: 150px;
+    font-size: 26px;
+    top: unset;
+}
+
+footer .right {
+    padding-left: 20px;
+    grid-gap: 1px;
+
+}
+footer .right p.title {
+    font-size: 22px;
+}
+
+footer .right p {
+    font-size: 1vw;
+}
+
+footer .socials {
     bottom: 10%;
 }
 
+#nav-footer {
+    display: block;
+}
+
+footer div nav ul {
+    padding-right: 10px;
+}
+
+footer div nav ul li {
+    list-style-type: none;
+    display: grid;
+    text-align: right;
+    width: 100%;
+}
+
+footer div nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+    list-style-type: none;
+    white-space: nowrap;
+    font-family: "Blinker",sans-serif;
+    font-size: 22px;
+    padding: 2px;
+}
 }
