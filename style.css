@@ -31,7 +31,7 @@ body {
 header { grid-area: top; background-color: #2B5AAD; }
 section#hero { grid-area: hero; }
 section#boxes { grid-area: boxes; }
-section#main, section#news, section#involved { grid-area: info; }
+section#main, section#news, section#involved, section#kids { grid-area: info; }
 section#exhibitions, section#exhibition-page { grid-area: exhibitions; }
 section#newsletter { grid-area: newsletter; }
 footer { grid-area: bottom; background-color:#2B5AAD; }
@@ -1332,6 +1332,7 @@ section#kids h2 {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
+    white-space: pre-line;
 }
 
 section#kids p {
@@ -1492,11 +1493,16 @@ section#boxes div p {
 section#main, 
 section#news,
 section#exhibition-page,
-section#involved {
-    padding-left: 200px;
-    padding-right: 200px;
+section#involved,
+section#kids {
+    padding-left: 150px;
+    padding-right: 150px;
     margin: 0px auto;
 }
+
+section#hero { /*! grid-area: hero; */
+}
+
 
 section#newsletter div.wrapper h3{
     padding-left: 70px;
@@ -1575,6 +1581,7 @@ section#main div.admision {
 section#main div.opening-hours {
     grid-column-start: 2;
     grid-row-start: 1;
+    margin-left: 50px;
 }
 
 section#main div.location {
@@ -1587,6 +1594,7 @@ section#main div.icons-visit {
     grid-column-start: 2;
     grid-row-start: 2;
     margin-top: 0;
+    margin-left: 50px;
 }
 
 section#main img.map {
@@ -1621,6 +1629,58 @@ section#news p,
 section#involved h2,
 section#involved p {
     color: black;
+}
+
+section#kids {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 0.3fr 0.3fr;
+}
+
+section#kids h2 {
+    font-size: 30px;
+    white-space: pre-line;
+}
+
+section#kids img:nth-child(1) {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-end: 5;
+    object-position: left;
+
+}
+
+section#kids img:nth-child(4) {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    object-position: top;
+}
+
+section#kids img:nth-child(5) {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    object-position: top;
+}
+
+section#kids p:nth-child(3) {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+section#kids p:nth-child(6) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+}
+
+section#kids h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
 }
 
 footer {
