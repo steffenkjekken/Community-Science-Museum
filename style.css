@@ -609,12 +609,16 @@ section#news p {
 }
 
 section#exhibition-page h2, 
-section#news h2,
-section#involved h2{
+section#news h2 {
     font-size: 4vw;
     padding-left: 12px;
     padding-top: 5px;
     color: #FFFFFF;
+}
+
+section#involved h2 {
+    color: #000;
+    font-size: 4vw;
 }
 
 section#exhibition-page div.textbox,
@@ -1364,7 +1368,6 @@ section#involved {
 
 section#involved h2 {
     margin: 0;
-    color: #000;
 }
 
 section#involved p {
