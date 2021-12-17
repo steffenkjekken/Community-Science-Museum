@@ -799,6 +799,7 @@ footer .right {
    grid-template-columns: 1fr 1fr;
    grid-gap:10px;
    width: 145px;
+   padding-right: 20px;
 
 } 
 
@@ -812,6 +813,7 @@ footer p.title {
 footer p {
     font-family: "Darker Grotesque", sans-serif;
     font-size: 8px;
+    text-decoration: none;
     color: #FFFFFF;
     white-space: pre-line;
     width: max-content;
