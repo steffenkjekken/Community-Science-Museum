@@ -25,34 +25,34 @@ section#newsletter { grid-area: newsletter; }
 footer { grid-area: bottom; background-color:#2B5AAD; }
 
 h1 {
-    font-family: "MuseoModerno", cursive;
+    font-family: 'MuseoModerno', cursive;
     font-weight: 400;
     font-size: 18px;
     margin: 0;
 }
 
 h2 {
-    font-family: "Blinker", sans-serif;
+    font-family: 'Blinker', sans-serif;
     font-weight: normal;
     font-size: 40px;
 }
 
 h3 {
-    font-family: "Blinker", sans-serif;
+    font-family: 'Blinker', sans-serif;
     font-weight: normal;
     color:black;
     font-size: 5vw;
 }
 
 h4 {
-    font-family: "MuseoModerno", cursive;
+    font-family: 'MuseoModerno', cursive;
     font-size: 20px;
     color: #FFFFFF;
 
 }
 
 header {
-    font-family: "MuseoModerno", cursive;
+    font-family: 'MuseoModerno', cursive;
     position: relative;
 }
 
