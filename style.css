@@ -605,7 +605,8 @@ section#exhibition-page p.desktop {
     display: none;
 }
 
-section#exhibition-page p.mobile {
+section#exhibition-page p.mobile,
+section#news p {
     font-family: "Darker Grotesque", sans-serif;
     font-size: 18px;
     color: #FFFFFF;
@@ -617,7 +618,7 @@ section#exhibition-page p.mobile {
 section#exhibition-page h2, 
 section#news h2,
 section#involved h2{
-    font-size: 3vw;
+    font-size: 4vw;
     padding-left: 12px;
     padding-top: 5px;
     color: #FFFFFF;
@@ -790,7 +791,7 @@ footer .socials li a {
     color: #FFFFFF;
 }
 
-footer div.nav-footer {
+#nav-footer {
     display: none;
 }
 
@@ -1502,10 +1503,6 @@ section#kids {
     margin: 0px auto;
 }
 
-section#hero { /*! grid-area: hero; */
-}
-
-
 section#newsletter div.wrapper h3{
     padding-left: 70px;
     margin-top: 10px;
@@ -1619,6 +1616,10 @@ section#main div.opening-hours > div > ul {
 
 section#news h2 {
     margin-bottom: -20px;
+}
+
+section#news p {
+    margin-top: 20px;
 }
 
 section#news div.textbox,
