@@ -301,6 +301,7 @@ section#boxes > div {
 section#boxes > div > h2 {
     margin: 0;
     vertical-align: middle;
+    padding: 8px;
 }
 
 section#boxes > div > h2 > a{
@@ -975,7 +976,7 @@ section#hero h4 {
 
 section#hero div.left h2 {
     color: #FFFFFF;
-    font-size: 4vw;
+    font-size: 3.9vw;
     padding: 25px;
     line-height: 140%;
     font-weight: 300;
@@ -1465,6 +1466,20 @@ body {
 #desktop ul li a {
     padding: 30px;
     font-size: 22px;
+}
+
+#header-bar {
+    height: 100%;
+}
+
+#announcement {
+    height: 50px;
+}
+
+#header-bar p {
+    font-size: 1rem;
+    font-size: 1.8vw;
+    padding: 5px;
 }
 
 section#hero {
