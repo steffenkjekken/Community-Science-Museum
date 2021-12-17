@@ -799,9 +799,12 @@ footer .right {
    grid-template-columns: 1fr 1fr;
    grid-gap:10px;
    width: 145px;
-   padding-right: 20px;
-
+   padding-left: 15px;
 } 
+
+footer .right > div:nth-child(2) {
+    display: none;
+}
 
 footer p.title {
     font-family: "Blinker", sans-serif;
@@ -812,7 +815,7 @@ footer p.title {
 
 footer p {
     font-family: "Darker Grotesque", sans-serif;
-    font-size: 8px;
+    font-size: 10px;
     text-decoration: none;
     color: #FFFFFF;
     white-space: pre-line;
@@ -1389,7 +1392,13 @@ footer .right {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
+    width: max-content;
 }
+
+footer .right > div:nth-child(2) {
+    display: block;
+}
+
 footer .right p.title {
     font-size: 2vw;
 }
@@ -1397,6 +1406,7 @@ footer .right p.title {
 footer .right p {
     font-size: 2vw;
     padding-right: 20px;
+    padding-left: unset;
 }
 
 footer .right div {
@@ -1717,7 +1727,7 @@ footer .right p.title {
 }
 
 footer .right p {
-    font-size: 1vw;
+    font-size: 1.3vw;
 }
 
 footer .socials {
